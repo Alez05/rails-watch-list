@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card-category card-large">
+    <h1>Add a movie to your <%= @list.name %> list</h1>
+    <div >
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.association :movie, prompt: "Select a movie" %>
+        <%= f.input :comment, placeholder: "Enter a comment about the movie" %>
+        <%= f.submit "Add Bookmark" %>
+      <% end %>
+    </div>
+
+    <%= link_to "back to movie list", lists_path %>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div class="card p-3 gap-4">
     <h1 class="text-primary">Create a new list</h1>
-      <%= simple_form_for @lists do |f| %>
+      <%= simple_form_for @list do |f| %>
       <%= f.input :name %>
       <%= f.submit "Create", class: "btn btn-secondary" %>
     <% end %>
